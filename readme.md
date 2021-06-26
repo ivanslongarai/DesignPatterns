@@ -1,0 +1,1 @@
+##### Repositório com Padrões de Projeto em Delphi e C#
