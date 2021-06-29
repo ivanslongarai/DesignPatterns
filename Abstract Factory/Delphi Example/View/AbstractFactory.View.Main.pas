@@ -33,8 +33,11 @@ var
 begin
   mmResult.Clear;
   oClient := TClient.Create;
-  mmResult.Lines.Text := oClient.Main;
-  FreeAndNil(oClient);
+  try
+    mmResult.Lines.Text := oClient.Main;
+  finally
+    FreeAndNil(oClient);
+  end;
 end;
 
 initialization
