@@ -13,6 +13,13 @@ uses
 // have several variants, but the products of one variant are incompatible
 // with products of another.
 
+// A interface Abstract Factory declara um conjunto de métodos que retorna diferentes
+// tipos de produtos abstratos.
+// Estes produtos são chamados de familia e são relacionados em uma camada superior
+// Produtos da mesma familia são frequentemente capazes de colaborar entre si.
+// Uma familia de produtos pode ter muitas variações, mas os produtos de uma variação é incompativel
+// com os produtos de uma outra.
+
 type
   IAbstractFactory = interface
     ['{54F6B347-C70C-40DC-B3D5-37E49C2A4095}']

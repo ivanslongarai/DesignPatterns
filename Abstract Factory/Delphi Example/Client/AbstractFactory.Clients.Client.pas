@@ -45,6 +45,8 @@ var
 begin
   // The client code can work with any concrete factory class.
 
+  // O código cliente trabalha com varias classes concretas de fabrica
+
   oConcreteFactory1 := TConcreteFactory1.Create;
   oConcreteFactory2 := TConcreteFactory2.Create;
 

@@ -7,6 +7,8 @@ uses
 
 // Concrete Products are created by corresponding Concrete Factories.
 
+// Produtos concretos são criados por correspondentes fabricas concretas
+
 type
   TConcreteProductA1 = class(TInterfacedObject, IAbstractProductA)
   public

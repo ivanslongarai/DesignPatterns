@@ -8,6 +8,8 @@ uses
 
 // Concrete Products are created by corresponding Concrete Factories.
 
+// Produtos concretos são criados por correspondentes fabricas concretas
+
 type
   TConcreteProductB1 = class(TInterfacedObject, IAbstractProductB)
   public
@@ -16,6 +18,9 @@ type
     // The variant, Product B1, is only able to work correctly with the
     // variant, Product A1. Nevertheless, it accepts any instance of
     // AbstractProductA as an argument.
+
+    // A variação, Produto B1, é somente capaz de trabalhar corretamente com a variant, Produto A1.
+    // Mesmo assim, aceita qualquer instancia de AbstractProductA como argumento
 
     function AnotherUsefulFunctionB(ACollaborator: IAbstractProductA): string;
 

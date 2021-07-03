@@ -12,6 +12,13 @@ uses
 // Note that signatures of the Concrete Factory's methods return an abstract
 // product, while inside the method a concrete product is instantiated.
 
+// Fabricas concretas produzem uma familia de produtos que pertencem a uma única variante
+// A fabrica garante que os produtos resultantes serão compatíveis.
+// Note que assinaturas dos metodos factory retornam um produto abstrato, enquanto
+// dentro do metodo um produto concreto é instanciado.
+
+
+
 type
   TConcreteFactory1 = class(TInterfacedObject, IAbstractFactory)
   public

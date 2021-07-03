@@ -8,6 +8,9 @@ uses
   AbstractFactory.Interfaces.IAbstractFactory;
 
 // Each Concrete Factory has a corresponding product variant.
+
+// Cada fabrica concreta possui uma variante de produto correspondente
+
 type
   TConcreteFactory2 = class(TInterfacedObject, IAbstractFactory)
   public
