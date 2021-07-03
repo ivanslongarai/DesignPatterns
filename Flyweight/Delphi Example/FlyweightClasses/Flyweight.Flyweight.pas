@@ -10,14 +10,17 @@ uses
 // accepts the rest of the state (extrinsic state, unique for each entity)
 // via its method parameters.
 
-type
-  TFlyweight = class
-  private
-    FSharedState: TCar;
-  public
-    constructor Create(ACar: TCar);
-    procedure Operation(AUniqueState: TCar);
-    destructor Destroy; override;
+// O Flyweight armazena uma parte comum do estado (também chamado de estado intrínseco)
+// que pertence a várias entidades de negócios reais. O Flyweight
+// aceita o resto do estado (estado extrínseco, único para cada entidade)
+// por meio de seus parâmetros de método.
+
+  type TFlyweight = class private FSharedState: TCar;
+public
+  constructor Create(ACar: TCar);
+  procedure Operation(AUniqueState: TCar);
+  destructor Destroy;
+  override;
 
   end;
 
@@ -46,8 +49,8 @@ var
 begin
   sUniqueState := TJson.ObjectToJsonString(AUniqueState);
   sShared := TJson.ObjectToJsonString(FSharedState);
-  TUtilsSingleton.WriteLog('Flyweight: Displaying shared ' + sShared + ' and unique ' +
-    sUniqueState + ' state.');
+  TUtilsSingleton.WriteLog('Flyweight: Displaying shared ' + sShared +
+    ' and unique ' + sUniqueState + ' state.');
 end;
 
 end.

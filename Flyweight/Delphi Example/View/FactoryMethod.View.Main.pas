@@ -96,6 +96,10 @@ begin
 
   // The client code either stores or calculates extrinsic state and
   // passes it to the flyweight's methods.
+
+  // O código do cliente armazena ou calcula o estado extrínseco e
+  // passa para os métodos do flyweight.
+
   oFlyweight.Operation(ACar);
 
   TUtilsSingleton.WriteLog(' ');
