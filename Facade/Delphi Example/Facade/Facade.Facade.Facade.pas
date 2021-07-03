@@ -28,6 +28,10 @@ end;
 // The Facade's methods are convenient shortcuts to the sophisticated
 // functionality of the subsystems. However, clients get only to a
 // fraction of a subsystem's capabilities.
+
+// Os métodos do facade são convenientes atalhos para uma sofisticada funcionalidade dos sub-sistemas
+// Contudo, os clients recebem somente uma fração das capacidades dos sub-sistemas
+
 function TFacade.Operation: string;
 begin
   Result := 'Facade initializes subsystems:' + '|' + FSubSystem1.Operation1() +

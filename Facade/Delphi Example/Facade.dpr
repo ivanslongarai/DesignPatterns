@@ -6,7 +6,7 @@ uses
   Facade.SubSystem.SubSystem1 in 'SubSystem\Facade.SubSystem.SubSystem1.pas',
   Facade.SubSystem.SubSystem2 in 'SubSystem\Facade.SubSystem.SubSystem2.pas',
   Facade.Facade.Facade in 'Facade\Facade.Facade.Facade.pas',
-  Facade.Client.Client in 'Facade.Client.Client.pas';
+  Facade.Client.Client in 'Client\Facade.Client.Client.pas';
 
 {$R *.res}
 

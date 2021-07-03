@@ -7,10 +7,10 @@ Usage examples: The Composite pattern is pretty common in C# code. It’s often 
 Identification: If you have an object tree, and each object of a tree is a part of the same class hierarchy, this is most likely a composite. If methods of these classes delegate the work to child objects of the tree and do it via the base class/interface of the hierarchy, this is definitely a composite.
 
 --------------------------------------------------------------------------------------------------------------------
-Composite é um Padrão que permite compor objetos dentro de uma estrutura em arvore e funciona também como se fosse um objeto único.
-O composite veio de uma solução popular agradável para a maioria dos problemas que requerem a construção de uma estrutura em arvore.
-Sua maior funcionalidade é a habilidade de rodar metodos recursivamente encima de toda estrutura da arvore e concatenar os resultados.
+Composite é um padrão que permite compor objetos dentro de uma estrutura em árvore e funciona também como se fosse um objeto único.
+O Composite   veio de uma solução popular agradável para a maioria dos problemas que requerem a construção de uma estrutura em árvore.
+Sua maior funcionalidade é a habilidade de rodar métodos recursivamente em cima de toda estrutura da árvore e concatenar os resultados.
 
 Exemplo de uso: O Padrão Composite é bem comum nas linguagens de programação, assim como C#. É frequentemente usado para representar hierarquias nos componentes de interface do usuário ou códigos que trabalham com gráficos.
 
-Identificação: Se você tem uma arvore de objetos e cada objeto da arvore é uma parte da mesma classe hierarquica, isto é muito provavelmente um Composite. Se os métodos desssas classes delegam o trabalho para os filhos da arvore e fazem isso usando a interface da classe base da hierarquia, então é definivamente um Composite.
+Identificação: Se você tem uma árvore de objetos e cada objeto da árvore é uma parte da mesma classe hierárquica, isto é muito provavelmente um Composite. Se os métodos dessas classes delegam o trabalho para os filhos da arvore e fazem isso usando a interface da classe base da hierarquia, então é definitivamente um Composite.
