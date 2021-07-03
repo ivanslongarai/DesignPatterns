@@ -19,7 +19,7 @@ produce unrelated products. In other words, results of various builders
 may not always follow the same interface.
 
 --------------------------------------------------------------------------------------------------------------------
-O Builder é um Padrão criacional que aceita a construção de objetos complexos passo a passo.
+O Builder é um Padrão criacional que permite a construção de objetos complexos passo a passo.
 Diferente de outros padrões de projeto, o Builder não querer que os produtos sigam a mesma interface.
 Com isso se faz possível produzir diferentes tipos de produtos usando o mesmo processo de construção.
 
