@@ -19,23 +19,15 @@ produce unrelated products. In other words, results of various builders
 may not always follow the same interface.
 
 --------------------------------------------------------------------------------------------------------------------
-O Builder é um Padrão criacional que permite a construção de objetos complexos passo a passo.
-Diferente de outros padrões de projeto, o Builder não querer que os produtos sigam a mesma interface.
-Com isso se faz possível produzir diferentes tipos de produtos usando o mesmo processo de construção.
+O Builder é um padrão criacional que permite a construção de objetos complexos passo a passo. Diferente de outros padrões de projeto, o Builder não requer que os produtos sigam a mesma interface. Com isso se faz possível produzir diferentes tipos de produtos usando o mesmo processo de construção.
 
-Exemplos de uso: O Padrão Builder é um padrão bem conhecido no mundo C# e diversas outras linguagens. É especialmente útil quando você precisa criar um objeto com uma possibilidade grande de configurações.
+Exemplos de uso: O Padrão Builder é um padrão bem conhecido no mundo C#, assim como diversas outras linguagens. É especialmente útil quando você precisa criar um objeto com uma grande possibilidade de configurações.
 
-Identificação: O Padrão Builder pode ser reconhecido em uma classe, ele tem um único método Create e alguns métodos para configurar o objeto de resultado (Product). O Padrão Builder geralmente suporta encadeamento. Ex.: (someBuilder.setValueA(1).setValueB(2).create()). 
+Identificação: O Padrão Builder pode ser reconhecido em uma classe, ele tem um único método Create e alguns métodos para configurar o objeto de resultado (Product). O Padrão Builder geralmente suporta encadeamento. Ex.: (someBuilder.setValueA(1).setValueB(2).create()).
 
-Este exemplo consiste em ilustrar a estrutura do Builder. Foca em responder essas perguntas:
-De quais classes o Builder consiste?
-Quais as responsabilidades dessas classes?
-Como os elementos do Builder estão relacionados?
+Este exemplo consiste em ilustrar a estrutura do Builder. Foca em responder essas perguntas: De quais classes o Builder consiste? Quais as responsabilidades dessas classes? Como os elementos do Builder estão relacionados?
 
-Faz sentido usar o Padrão Builder somente se seu produto é bem complexo e requer uma extensiva configuração.
-Direrente de outros Padrões criacionais, diferente builders concretos pode produzir produtos não relacionados.
-Em outras palavras, resultados de varios builders podem não aceitar seguir as assinaturas de uma mesma interface.
+Faz sentido usar o Padrão Builder somente se seu produto é bem complexo e requer uma extensiva configuração. Diferente de outros Padrões criacionais, diferentes builders concretos podem produzir produtos não relacionados. Em outras palavras, resultados de vários builders podem não aceitar seguir as assinaturas de uma mesma interface.
 
---------------------------------------------------------------------------------------------------------------------
 
 
