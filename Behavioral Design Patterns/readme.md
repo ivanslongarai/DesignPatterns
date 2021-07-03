@@ -33,32 +33,32 @@ Lets you separate algorithms from the objects on which they operate.
 --------------------------------------------------------------------------------------------------------------------
 Os padrões de projeto comportamentais estão relacionados aos algoritmos e à atribuição de responsabilidades entre os objetos.
 
-##### Cadeia de Responsabilidade
+##### Chain of Responsibility
 Permite que você passe solicitações ao longo de uma cadeia de manipuladores. Ao receber uma solicitação, cada manipulador decide processar a solicitação ou passá-la para o próximo manipulador na cadeia.
 
-##### Comando
+##### Command
 Transforma uma solicitação em um objeto autônomo que contém todas as informações sobre a solicitação. Essa transformação permite transmitir solicitações como argumentos de método, atrasar ou enfileirar a execução de uma solicitação e oferecer suporte a operações que podem ser desfeitas.
 
-##### Iterador
+##### Iterator
 Permite percorrer os elementos de uma coleção sem expor sua representação subjacente (lista, pilha, árvore, etc.).
 
-##### Mediador
+##### Mediator
 Permite reduzir dependências caóticas entre objetos. O padrão restringe as comunicações diretas entre os objetos e os força a colaborar apenas por meio de um objeto mediador.
 
-##### Lembrança
+##### Memento
 Permite salvar e restaurar o estado anterior de um objeto sem revelar os detalhes de sua implementação.
 
-##### Observador
+##### Observer
 Permite definir um mecanismo de inscrição para notificar vários objetos sobre quaisquer eventos que acontecem ao objeto que eles estão observando.
 
-##### Estado
+##### State
 Permite que um objeto altere seu comportamento quando seu estado interno muda. Parece que o objeto mudou sua classe.
 
-##### Estratégia
+##### Strategy
 Permite definir uma família de algoritmos, colocar cada um deles em uma classe separada e tornar seus objetos intercambiáveis.
 
-##### Método de Template
+##### Template Method
 Define o esqueleto de um algoritmo na superclasse, mas permite que as subclasses substituam etapas específicas do algoritmo sem alterar sua estrutura.
 
-##### Visitante
+##### Visitor
 Permite separar algoritmos dos objetos nos quais operam.
