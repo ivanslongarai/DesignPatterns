@@ -7,6 +7,13 @@ What classes does it consist of?
 What roles do these classes play?
 In what way the elements of the pattern are related?
 
+It makes sense to use the Builder pattern only when your products are
+uite complex and require extensive configuration.
+
+Unlike in other creational patterns, different concrete builders can
+produce unrelated products. In other words, results of various builders
+may not always follow the same interface.
+
 --------------------------------------------------------------------------------------------------------------------
 
 Exemplos de uso: O Padrão Builder é um padrão bem conhecido no mundo C# e diversas outras linguagens. É especialmente útil quando você precisa criar um objeto com uma possibilidade grande de configurações.
@@ -17,3 +24,11 @@ Este exemplo consiste em ilustrar a estrutura do Builder. Foca em responder essa
 De quais classes o Builder consiste?
 Quais as responsabilidades dessas classes?
 Como os elementos do Builder estão relacionados?
+
+Faz sentido usar o Padrão Builder somente se seu produto é bem complexo e requer uma extensiva configuração.
+Direrente de outros Padrões criacionais, diferente builders concretos pode produzir produtos não relacionados.
+Em outras palavras, resultados de varios builders podem não aceitar seguir as assinaturas de uma mesma interface.
+
+--------------------------------------------------------------------------------------------------------------------
+
+

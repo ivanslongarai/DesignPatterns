@@ -15,7 +15,7 @@ type
     FTripComputer: ITripComputer;
     FEntityName: string;
   public
-    function GetManual: string;
+    function GetDescription: string;
     function SetSeats(ANumberOfSeats: Integer): IBuilder;
     function SetEngine(AEngine: IEngine): IBuilder;
     function SetTripComputer(ATripComputer: ITripComputer): IBuilder;
@@ -33,7 +33,7 @@ uses
 
 { TManual }
 
-function TManual.GetManual: string;
+function TManual.GetDescription: string;
 
 begin
   Result := 'Manual do carro: ' + FEntityName;
