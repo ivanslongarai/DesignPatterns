@@ -13,4 +13,4 @@ Sua maior funcionalidade é a habilidade de rodar metodos recursivamente encima 
 
 Exemplo de uso: O Padrão Composite é bem comum nas linguagens de programação, assim como C#. É frequentemente usado para representar hierarquias nos componentes de interface do usuário ou códigos que trabalham com gráficos.
 
-Identificação: Se você tem uma arvore de objetos e cada objeto da arvore é uma parte da mesma classe hierarquica, isto é muito provavelmente um Composite. Se os métodos desssas classes delegam o trabalho para os filhos da arvore and fazem isso usando a interface da classe base da hierarquia, então é definivamente um Composite.
+Identificação: Se você tem uma arvore de objetos e cada objeto da arvore é uma parte da mesma classe hierarquica, isto é muito provavelmente um Composite. Se os métodos desssas classes delegam o trabalho para os filhos da arvore e fazem isso usando a interface da classe base da hierarquia, então é definivamente um Composite.
