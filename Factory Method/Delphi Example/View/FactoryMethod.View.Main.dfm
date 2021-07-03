@@ -24,10 +24,6 @@ object frmMain: TfrmMain
     ParentCtl3D = False
     ReadOnly = True
     TabOrder = 0
-    ExplicitLeft = 136
-    ExplicitTop = 80
-    ExplicitWidth = 185
-    ExplicitHeight = 89
   end
   object pnlTop: TPanel
     Left = 0
@@ -37,9 +33,6 @@ object frmMain: TfrmMain
     Align = alTop
     BevelOuter = bvNone
     TabOrder = 1
-    ExplicitLeft = 136
-    ExplicitTop = 104
-    ExplicitWidth = 185
     object btnGetResult: TButton
       Left = 0
       Top = 0

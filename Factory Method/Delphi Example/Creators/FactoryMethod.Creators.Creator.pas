@@ -21,6 +21,11 @@ type
     // by overriding the factory method and returning a different type of
     // product from it.
 
+    // Também note que, apesar do nome, a responsablilidade primaria do creator  não é criar produtos.
+    // Geralmente ele contém algun código de negocio que depende do objeto produto retornado pelo método
+    // Subclasses podem indiretamente mudar esssas regras subescrevendo o Factory method e retornando um
+    // diverente tipo de produto.
+
     function SomeOperation: string; virtual;
   end;
 
@@ -37,8 +42,12 @@ var
 begin
   // Call the factory method to create a Product object.
 
+  // Chama o factory method para criar o objeto produto
+
   oProduct := FactoryMethod();
   // Now, use the product.
+
+  // Agora usa o produto
 
   Result := 'Creator: The same Creators code has just worked with ' +
     oProduct.Operation();

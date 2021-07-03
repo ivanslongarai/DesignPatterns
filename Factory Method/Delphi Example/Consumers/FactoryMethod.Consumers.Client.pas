@@ -41,6 +41,10 @@ begin
   // the creator via the base interface, you can pass it any creator's
   // subclass.
 
+  // O código cliente trabalha com uma instancia de um creator concreto, embora através de sua interface
+  // Enquanto o cliente se mantem trabalhando com o creator via interface base, você pode passar
+  // para a criação qualquer sub-classe derivada de ICreator
+
 end;
 
 class function TClient.New(AMemo: TMemo): IClient;

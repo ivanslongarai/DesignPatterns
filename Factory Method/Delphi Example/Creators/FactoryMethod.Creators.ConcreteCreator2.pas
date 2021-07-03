@@ -8,6 +8,9 @@ uses
 
 // Concrete Creators override the factory method in order to change the
 // resulting product's type.
+
+// Creators concretos subescrevem o factory method em ordem de modificar o tipo do produto resultante
+
 type
   TConcreteCreator2 = class(TCreator, IConcreteCreator)
   public
@@ -15,6 +18,10 @@ type
     // type, even though the concrete product is actually returned from the
     // method. This way the Creator can stay independent of concrete product
     // classes.
+
+    // Note que a assinatura do método permanece usando o tipo de produto abstrato, mesmo que o retorno do
+    // método é na verdade um produto concreto.
+    // Desta forma o Creator pode permanecer independente das classes concretas do produto.
     function FactoryMethod: IProduct; override;
     class function New: TConcreteCreator2;
   end;
