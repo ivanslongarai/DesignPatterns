@@ -15,7 +15,7 @@ type
     // supposed to work with a particular kind of collection.
 
     // Armazena a posição transversal atual. Um iterador pode ter muitos
-    // outros campos para armazenar o estado de iteração, especialmente quando é
+    // outros campos para armazenar o estado de iteração, especialmente quando
     // deve funcionar com um tipo específico de coleção
 
     FPosition: Integer;
