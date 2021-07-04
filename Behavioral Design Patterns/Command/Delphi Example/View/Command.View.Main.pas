@@ -45,6 +45,8 @@ var
 
 begin
 
+  mmResult.Clear;
+
   // The client code can parameterize an invoker with any commands.
 
   // O client code pode parametrizar um invoker com quaisquer comandos.
@@ -58,7 +60,9 @@ begin
   oComplexCommand := TComplexCommand.Create(oReceiver, 'Send email',
     'Save Report');
 
-  oInvoker.SetOnFinish(oComplexCommand).DoSomethingImportant();
+  oInvoker
+    .SetOnFinish(oComplexCommand)
+    .DoSomethingImportant();
 
 end;
 
