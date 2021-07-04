@@ -113,6 +113,8 @@
         <DCCReference Include="Commands\Command.Commands.ComplexCommand.pas"/>
         <DCCReference Include="Receivers\Command.Receivers.Receiver.pas"/>
         <DCCReference Include="Invoker\Command.Invokers.Invoker.pas"/>
+        <DCCReference Include="Interfaces\Command.Interfaces.Receiver.pas"/>
+        <DCCReference Include="Interfaces\Command.Interfaces.Invoker.pas"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>

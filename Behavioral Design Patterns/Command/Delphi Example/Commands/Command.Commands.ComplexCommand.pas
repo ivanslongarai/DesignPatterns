@@ -3,12 +3,12 @@ unit Command.Commands.ComplexCommand;
 interface
 
 uses
-  Command.Interfaces.ICommand, Command.Receivers.Receiver;
+  Command.Interfaces.ICommand, Command.Interfaces.Receiver;
 
 // Some commands can delegate more complex operations to other
 // objects, called "receivers."
 
-// Alguns commands podem delerar operações mais complexas para outros objetos, chamados "receivers."
+// Alguns commands podem delegar operações mais complexas para outros objetos, chamados "receivers."
 
 type
   TComplexCommand = class(TInterfacedObject, ICommand)
@@ -16,15 +16,15 @@ type
     // Context data, required for launching the receiver's methods.
     FA: string;
     FB: string;
-    FReceiver: TReceiver;
+    FReceiver: IReceiver;
   public
     // Complex commands can accept one or several receiver objects along
     // with any context data via the constructor.
 
-    // Comandos complexos podem aceitar um ou vários objetos receptores junto
+    // Comandos complexos podem aceitar um ou vários objetos receiver junto
     // com quaisquer dados de contexto por meio do construtor.
 
-    constructor Create(AReceiver: TReceiver; AStringA, AStringB: string);
+    constructor Create(AReceiver: IReceiver; AStringA, AStringB: string);
     function Execute: ICommand;
   end;
 
@@ -35,7 +35,7 @@ uses
 
 { TComplexCommand }
 
-constructor TComplexCommand.Create(AReceiver: TReceiver;
+constructor TComplexCommand.Create(AReceiver: IReceiver;
   AStringA, AStringB: string);
 begin
   FReceiver := AReceiver;

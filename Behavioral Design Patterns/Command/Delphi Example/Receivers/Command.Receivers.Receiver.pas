@@ -2,6 +2,9 @@ unit Command.Receivers.Receiver;
 
 interface
 
+uses
+  Command.Interfaces.Receiver;
+
 // The Receiver classes contain some important business logic. They know how
 // to perform all kinds of operations, associated with carrying out a
 // request. In fact, any class may serve as a Receiver.
@@ -11,10 +14,10 @@ interface
 // solicitação. Na verdade, qualquer classe pode servir como Receptor.
 
 type
-  TReceiver = class
+  TReceiver = class(TInterfacedObject, IReceiver)
   public
-    function DoSomething(AString: string): TReceiver;
-    function DoSomethingElse(AString: string): TReceiver;
+    function DoSomething(AString: string): IReceiver;
+    function DoSomethingElse(AString: string): IReceiver;
   end;
 
 implementation
@@ -24,13 +27,13 @@ uses
 
 { TReceiver }
 
-function TReceiver.DoSomething(AString: string): TReceiver;
+function TReceiver.DoSomething(AString: string): IReceiver;
 begin
   TUtilsSingleton.WriteLog('Receiver: Working on <' + AString + '>');
   Result := Self;
 end;
 
-function TReceiver.DoSomethingElse(AString: string): TReceiver;
+function TReceiver.DoSomethingElse(AString: string): IReceiver;
 begin
   TUtilsSingleton.WriteLog('Receiver: Also working on <' + AString + '>');
   Result := Self;

@@ -31,14 +31,15 @@ uses
   Command.Interfaces.ICommand,
   Command.Commands.SimpleCommand,
   Command.Commands.ComplexCommand,
-  Command.Receivers.Receiver;
+  Command.Receivers.Receiver, Command.Interfaces.Receiver,
+  Command.Interfaces.Invoker;
 
 {$R *.dfm}
 
 procedure TfrmMain.btnGetResultClick(Sender: TObject);
 var
-  oInvoker: TInvoker;
-  oReceiver: TReceiver;
+  oInvoker: IInvoker;
+  oReceiver: IReceiver;
   oSimpleCommand: ICommand;
   oComplexCommand: ICommand;
 
@@ -51,24 +52,13 @@ begin
   oInvoker := TInvoker.Create;
   oReceiver := TReceiver.Create;
 
-  try
+  oSimpleCommand := TSimpleCommand.Create('Say Hi!');
+  oInvoker.SetOnStart(oSimpleCommand);
 
-    oSimpleCommand := TSimpleCommand.Create('Say Hi!');
-    oInvoker.SetOnStart(oSimpleCommand);
+  oComplexCommand := TComplexCommand.Create(oReceiver, 'Send email',
+    'Save Report');
 
-    oComplexCommand := TComplexCommand.Create(oReceiver, 'Send email',
-      'Save Report');
-
-    oInvoker
-      .SetOnFinish(oComplexCommand)
-      .DoSomethingImportant();
-
-  finally
-
-    FreeAndNil(oInvoker);
-    FreeAndNil(oReceiver);
-
-  end;
+  oInvoker.SetOnFinish(oComplexCommand).DoSomethingImportant();
 
 end;
 

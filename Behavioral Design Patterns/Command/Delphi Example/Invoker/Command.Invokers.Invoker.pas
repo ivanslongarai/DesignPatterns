@@ -3,10 +3,10 @@ unit Command.Invokers.Invoker;
 interface
 
 uses
-  Command.Interfaces.ICommand;
+  Command.Interfaces.ICommand, Command.Interfaces.Invoker;
 
 type
-  TInvoker = class
+  TInvoker = class(TInterfacedObject, IInvoker)
   private
     FOnStart: ICommand;
     FOnFinish: ICommand;
@@ -15,8 +15,8 @@ type
 
     // Inicializa comandos.
 
-    function SetOnStart(ACommand: ICommand): TInvoker;
-    function SetOnFinish(ACommand: ICommand): TInvoker;
+    function SetOnStart(ACommand: ICommand): IInvoker;
+    function SetOnFinish(ACommand: ICommand): IInvoker;
 
     // The Invoker does not depend on concrete command or receiver classes.
     // The Invoker passes a request to a receiver indirectly, by executing a
@@ -26,7 +26,7 @@ type
     // O Invoker passa uma solicitação para um receptor indiretamente, executando um
     // comando.
 
-    function DoSomethingImportant: TInvoker;
+    function DoSomethingImportant: IInvoker;
   end;
 
 implementation
@@ -34,9 +34,9 @@ implementation
 uses
   Command.Utils.Util;
 
-{ TInvoker }
+{ IInvoker }
 
-function TInvoker.DoSomethingImportant: TInvoker;
+function TInvoker.DoSomethingImportant: IInvoker;
 begin
   TUtilsSingleton.WriteLog
     ('Invoker: Does anybody want something done before I begin?');
@@ -55,13 +55,13 @@ begin
   Result := Self;
 end;
 
-function TInvoker.SetOnFinish(ACommand: ICommand): TInvoker;
+function TInvoker.SetOnFinish(ACommand: ICommand): IInvoker;
 begin
   FOnFinish := ACommand;
   Result := Self;
 end;
 
-function TInvoker.SetOnStart(ACommand: ICommand): TInvoker;
+function TInvoker.SetOnStart(ACommand: ICommand): IInvoker;
 begin
   FOnStart := ACommand;
   Result := Self;
