@@ -76,7 +76,7 @@ end;
 procedure TAlphabeticalOrderIterator.Reset;
 begin
   inherited;
-  FPosition := TUtils.IIF(FReverse, FCollection.GetItems.Count - 1, 0);
+  FPosition := Integer(TUtils.IIF(FReverse, FCollection.GetItems.Count - 1, 0));
 end;
 
 end.
